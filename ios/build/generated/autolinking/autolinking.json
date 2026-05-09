@@ -3,6 +3,19 @@
   "reactNativePath": "/Users/daniel/Documents/Projects/QuestShell/node_modules/react-native",
   "reactNativeVersion": "0.85",
   "dependencies": {
+    "@react-native-community/push-notification-ios": {
+      "root": "/Users/daniel/Documents/Projects/QuestShell/node_modules/@react-native-community/push-notification-ios",
+      "name": "@react-native-community/push-notification-ios",
+      "platforms": {
+        "ios": {
+          "podspecPath": "/Users/daniel/Documents/Projects/QuestShell/node_modules/@react-native-community/push-notification-ios/RNCPushNotificationIOS.podspec",
+          "version": "1.12.0",
+          "configurations": [],
+          "scriptPhases": []
+        },
+        "android": null
+      }
+    },
     "react-native-safe-area-context": {
       "root": "/Users/daniel/Documents/Projects/QuestShell/node_modules/react-native-safe-area-context",
       "name": "react-native-safe-area-context",
@@ -56,19 +69,6 @@
           "cxxModuleHeaderName": null,
           "isPureCxxDependency": false
         }
-      }
-    },
-    "@react-native-community/push-notification-ios": {
-      "root": "/Users/daniel/Documents/Projects/QuestShell/node_modules/@react-native-community/push-notification-ios",
-      "name": "@react-native-community/push-notification-ios",
-      "platforms": {
-        "ios": {
-          "podspecPath": "/Users/daniel/Documents/Projects/QuestShell/node_modules/@react-native-community/push-notification-ios/RNCPushNotificationIOS.podspec",
-          "version": "1.12.0",
-          "configurations": [],
-          "scriptPhases": []
-        },
-        "android": null
       }
     }
   },
