@@ -1,16 +1,38 @@
 import { Linking, StyleSheet, View } from 'react-native';
+import React, { useRef } from 'react';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { WebView, WebViewMessageEvent } from 'react-native-webview';
 
-import React from 'react';
+import { useApnsToken } from './src/hooks/useApnsToken';
 
 function App() {
+  const webViewRef = useRef<WebView>(null);
+
+  const apnsToken = useApnsToken();
+
+  const sendTokenToWebApp = () => {
+    if (!apnsToken) return;
+
+    webViewRef.current?.postMessage(
+      JSON.stringify({
+        type: 'apns-token',
+        token: apnsToken,
+        platform: 'ios',
+        environment: __DEV__ ? 'sandbox' : 'production',
+      })
+    );
+  };
+
   const handleMessage = (event: WebViewMessageEvent) => {
     try {
       const data = JSON.parse(event.nativeEvent.data);
 
       if (data.type === 'open-external-url' && data.url) {
         Linking.openURL(data.url);
+      }
+
+      if (data.type === 'request-apns-token') {
+        sendTokenToWebApp();
       }
     } catch (err) {
       console.warn('Invalid message from WebView', err);
@@ -19,11 +41,16 @@ function App() {
 
   return (
     <SafeAreaProvider>
-      <SafeAreaView style={styles.container} edges={['top', 'bottom', 'left', 'right']}>
+      <SafeAreaView
+        style={styles.container}
+        edges={['top', 'bottom', 'left', 'right']}
+      >
         <View style={styles.container}>
           <WebView
+            ref={webViewRef}
             source={{ uri: 'https://side-kwest.vercel.app' }}
             onMessage={handleMessage}
+            onLoadEnd={sendTokenToWebApp}
             style={styles.container}
             containerStyle={styles.container}
             automaticallyAdjustContentInsets={false}
