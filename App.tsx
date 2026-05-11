@@ -1,3 +1,4 @@
+import { APNS_ENVIRONMENT, WEB_APP_URL } from './src/config/env';
 import { Linking, StyleSheet, View } from 'react-native';
 import React, { useRef } from 'react';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
@@ -7,7 +8,6 @@ import { useApnsToken } from './src/hooks/useApnsToken';
 
 function App() {
   const webViewRef = useRef<WebView>(null);
-
   const apnsToken = useApnsToken();
 
   const sendTokenToWebApp = () => {
@@ -18,7 +18,7 @@ function App() {
         type: 'apns-token',
         token: apnsToken,
         platform: 'ios',
-        environment: __DEV__ ? 'sandbox' : 'production',
+        environment: APNS_ENVIRONMENT,
       })
     );
   };
@@ -41,14 +41,11 @@ function App() {
 
   return (
     <SafeAreaProvider>
-      <SafeAreaView
-        style={styles.container}
-        edges={['top', 'bottom', 'left', 'right']}
-      >
+      <SafeAreaView style={styles.container} edges={['top', 'bottom', 'left', 'right']}>
         <View style={styles.container}>
           <WebView
             ref={webViewRef}
-            source={{ uri: 'https://side-kwest.vercel.app' }}
+            source={{ uri: WEB_APP_URL }}
             onMessage={handleMessage}
             onLoadEnd={sendTokenToWebApp}
             style={styles.container}
