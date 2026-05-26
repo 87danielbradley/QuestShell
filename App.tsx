@@ -1,5 +1,5 @@
 import { APNS_ENVIRONMENT, WEB_APP_URL } from './src/config/env';
-import { Linking, StyleSheet, View } from 'react-native';
+import { Linking, Platform, StyleSheet, View } from 'react-native';
 import React, { useRef } from 'react';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { WebView, WebViewMessageEvent } from 'react-native-webview';
@@ -11,6 +11,7 @@ function App() {
   const apnsToken = useApnsToken();
 
   const sendTokenToWebApp = () => {
+    if (Platform.OS !== 'ios') return;
     if (!apnsToken) return;
 
     webViewRef.current?.postMessage(
