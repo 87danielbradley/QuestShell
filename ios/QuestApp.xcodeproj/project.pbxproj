@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C80B921A6F3F58F76C31292 /* libPods-QuestApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-QuestApp.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		653F91EE2FD27C7F00F05CC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653F91ED2FD27C7F00F05CC8 /* LaunchScreen.storyboard */; };
 		75118EDB8CA6DB6D224AD1C3 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
@@ -22,6 +23,7 @@
 		3B4392A12AC88292D35C810B /* Pods-QuestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestApp.debug.xcconfig"; path = "Target Support Files/Pods-QuestApp/Pods-QuestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-QuestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestApp.release.xcconfig"; path = "Target Support Files/Pods-QuestApp/Pods-QuestApp.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-QuestApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuestApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		653F91ED2FD27C7F00F05CC8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		654445B62FAEC3C900091EE8 /* QuestApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = QuestApp.entitlements; path = QuestApp/QuestApp.entitlements; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = QuestApp/AppDelegate.swift; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = QuestApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				653F91ED2FD27C7F00F05CC8 /* LaunchScreen.storyboard */,
 				13B07FAE1A68108700A75B9A /* QuestApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				653F91EE2FD27C7F00F05CC8 /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				75118EDB8CA6DB6D224AD1C3 /* PrivacyInfo.xcprivacy in Resources */,
 			);
@@ -193,9 +197,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-QuestApp/Pods-QuestApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-QuestApp/Pods-QuestApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -232,9 +240,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-QuestApp/Pods-QuestApp-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-QuestApp/Pods-QuestApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -266,6 +278,7 @@
 				DEVELOPMENT_TEAM = 785Z3ZQY58;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = QuestApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Side Quest Live";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -299,6 +312,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 785Z3ZQY58;
 				INFOPLIST_FILE = QuestApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Side Quest Live";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
