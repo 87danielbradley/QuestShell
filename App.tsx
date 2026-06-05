@@ -57,6 +57,10 @@ function App() {
             allowsInlineMediaPlayback
             mediaPlaybackRequiresUserAction={false}
             allowsFullscreenVideo={false}
+            javaScriptEnabled
+            domStorageEnabled
+            androidLayerType="hardware"
+            mixedContentMode="always"
           />
         </View>
       </SafeAreaView>
