@@ -10,6 +10,8 @@
 		0C80B921A6F3F58F76C31292 /* libPods-QuestApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-QuestApp.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		653F91EE2FD27C7F00F05CC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653F91ED2FD27C7F00F05CC8 /* LaunchScreen.storyboard */; };
+		653F91F12FD5102100F05CC8 /* QuestLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653F91F02FD5102100F05CC8 /* QuestLocation.swift */; };
+		653F91F22FD5102100F05CC8 /* QuestLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 653F91EF2FD5102100F05CC8 /* QuestLocation.m */; };
 		75118EDB8CA6DB6D224AD1C3 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -23,6 +25,8 @@
 		5709B34CF0A7D63546082F79 /* Pods-QuestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestApp.release.xcconfig"; path = "Target Support Files/Pods-QuestApp/Pods-QuestApp.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-QuestApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuestApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		653F91ED2FD27C7F00F05CC8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		653F91EF2FD5102100F05CC8 /* QuestLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestLocation.m; sourceTree = "<group>"; };
+		653F91F02FD5102100F05CC8 /* QuestLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestLocation.swift; sourceTree = "<group>"; };
 		654445B62FAEC3C900091EE8 /* QuestApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = QuestApp.entitlements; path = QuestApp/QuestApp.entitlements; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = QuestApp/AppDelegate.swift; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -43,6 +47,8 @@
 		13B07FAE1A68108700A75B9A /* QuestApp */ = {
 			isa = PBXGroup;
 			children = (
+				653F91EF2FD5102100F05CC8 /* QuestLocation.m */,
+				653F91F02FD5102100F05CC8 /* QuestLocation.swift */,
 				654445B62FAEC3C900091EE8 /* QuestApp.entitlements */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				761780EC2CA45674006654EE /* AppDelegate.swift */,
@@ -249,6 +255,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				653F91F12FD5102100F05CC8 /* QuestLocation.swift in Sources */,
+				653F91F22FD5102100F05CC8 /* QuestLocation.m in Sources */,
 				761780ED2CA45674006654EE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
